@@ -30,6 +30,12 @@ $array_filter = array_filter($vetor, function($item){
     return $item % 2 == 0; //retorna apenas os valores pares para o array $new
 });
 
+$cargo = array_filter($cargos, function($e) use($codFuncao) {
+			
+			return $e->codFuncao == $codFuncao;
+});
+
+
 var_dump($array_filter);
 
 echo '<br>Alterar item por item de um array - array_map()';
